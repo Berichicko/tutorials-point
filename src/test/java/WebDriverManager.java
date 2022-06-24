@@ -9,8 +9,7 @@ public class WebDriverManager {
 
     @Before
     public void setUp() {
-        io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+       driver = new ChromeDriver();
     }
 
     @After
