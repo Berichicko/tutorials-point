@@ -4,13 +4,13 @@ import org.openqa.selenium.By;
 
 import static junit.framework.TestCase.assertEquals;
 
-public class SeleniumDemoTest extends WebDriverManager {
+public class SeleniumDemoTest extends WebDriverSettings {
 
 
     @Test
     public void givenWindowMaxWhenGetThenInitialize() {
         driver.manage().window().maximize();
-        driver.get("https://www.tutorialspoint.com/");
+
     }
 
     @Test
@@ -23,8 +23,8 @@ public class SeleniumDemoTest extends WebDriverManager {
     @Test
     public void givenHeaderWhenAddThenReturn() {
         System.out.println("In Verify Heading Text Above Search Test Case");
-        String expectedearchHeading = "  Enjoy theory and lab at the same time, right here online  ";
-        String actualHeading = driver.findElement(By.xpath("html/body/div[3]/div[1]/div/div/div/h2")).getText();
+        String expectedearchHeading = "fingertips";
+        String actualHeading = driver.findElement(By.xpath("/html/body/main/section[1]/div/div/div[1]/h1/span")).getText();
         assertEquals(expectedearchHeading, actualHeading);
     }
 }
