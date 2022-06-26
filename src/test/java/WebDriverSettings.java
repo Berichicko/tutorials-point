@@ -7,8 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WebDriverSettings {
 
-    public WebDriver driver;
     final String urlConnection = "https://www.tutorialspoint.com/";
+    public WebDriver driver;
 
     @Before
     public void setUp() {
@@ -18,8 +18,11 @@ public class WebDriverSettings {
     }
 
     @After
-    public void close() throws InterruptedException {
-        Thread.sleep(5000);
+    public void close() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();}
         driver.quit();
     }
 }

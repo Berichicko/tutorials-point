@@ -24,7 +24,8 @@ public class SeleniumDemoTest extends WebDriverSettings {
     public void givenHeaderWhenAddThenReturn() {
         System.out.println("In Verify Heading Text Above Search Test Case");
         String expectedearchHeading = "fingertips";
-        String actualHeading = driver.findElement(By.xpath("/html/body/main/section[1]/div/div/div[1]/h1/span")).getText();
+        String actualHeading = driver.findElement
+                (By.xpath("/html/body/main/section[1]/div/div/div[1]/h1/span")).getText();
         assertEquals(expectedearchHeading, actualHeading);
     }
 }
