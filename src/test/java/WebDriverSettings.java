@@ -7,14 +7,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WebDriverSettings {
 
-    final String urlConnection = "https://www.tutorialspoint.com/";
-    public WebDriver driver;
+    final static String URL_CONNECTION = "https://www.tutorialspoint.com/";
+    WebDriver driver;
 
     @Before
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get(urlConnection);
+        driver.get(URL_CONNECTION);
     }
 
     @After
